@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('cata.jpg') center / cover no-repeat;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(10px);
+    padding: 0.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 2.5rem;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+a {
+    color: black;
+}
+
+a :hover{
+    color: gray;
+    transition: 0.1s ;
+}
+
+h1{
+    color: black;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    color: black;
+    font-family: 'Times New Roman', Times, serif; 
+    margin-top: 50px;
+    margin-left: 50%;
+}
+
+p {
+    max-width: 500px;
+    margin-top: 50px;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
