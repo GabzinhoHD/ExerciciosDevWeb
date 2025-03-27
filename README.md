@@ -1,2 +1,2 @@
-# Listas
-Atividade de criação de listas e estilização.
+# Aula 2
+Atividades sobre lista e estilizações
