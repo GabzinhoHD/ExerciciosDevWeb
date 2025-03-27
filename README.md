@@ -1,3 +1,2 @@
-# Cataratas
-aula 1
-Pagina simples sobre as cataratas do Iguaçu
+# Aula 1 
+Atividade de criação de uma pagina simples sobre um ponto turistico de FOz do Iguaçu.
