@@ -1,0 +1,18 @@
+body{
+    line-height: 23px;
+}
+
+h1{
+    padding:10px;
+    background: #f0f8ff;
+    max-width: 400px;
+}
+
+ul{
+    list-style: none;
+    font-weight: 600;
+}
+
+span{
+font-weight: lighter;
+}

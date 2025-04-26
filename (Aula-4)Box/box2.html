@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div.caixa {
+            box-sizing:border-box;
+            border: 1px solid #5a5a5a;
+            width: 150px;
+            height: 150px;
+            margin: 4px;
+            display: inline-block;
+        }
+        div.circulo{
+            border-radius: 80px;
+        }
+        div.caixa.cor1 {
+            background-color: #ffff6b;
+        }
+        div.caixa.cor2 {
+            background-color: #adfbad;
+        }
+        div.caixa.cor3 {
+            background-color: #ffc1a9;
+        }
+    </style>
+    <title>Box 2</title>
+</head>
+<body>
+    <div>
+        <div class="caixa circulo cor1"></div>
+        <div class="caixa"></div>
+        <div class="caixa cor2"></div>
+    </div>
+    <div>
+        <div class="caixa cor3"></div>
+        <div class="caixa circulo cor2"></div>
+        <div class="caixa cor3"></div>
+    </div>
+    <div>
+        <div class="caixa cor2"></div>
+        <div class="caixa cor3"></div>
+        <div class="caixa circulo cor1"></div>
+    </div>
+</body>
+</html>

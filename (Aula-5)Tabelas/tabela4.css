@@ -1,0 +1,23 @@
+table{
+    border: 1px solid #2c2c2c;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #6e6e6e;
+    border: 1px solid #808080;
+    color: white;
+    padding: 4px;
+}
+
+.verde {
+    background-color: #98ff98;
+    border: 1px solid #808080;
+    padding: 4px;
+}
+
+.azul {
+    background-color: #ccffff;
+    border: 1px solid #808080;
+    padding: 4px;
+}

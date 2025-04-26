@@ -1,0 +1,25 @@
+body{
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h1{
+    font-size: 32px;
+    padding:10px;
+    background: #f0f8ff;
+    max-width: 400px;
+}
+
+ul{
+    border: 1px #9b9b9b solid;
+    padding: 30px;
+    font-weight: lighter;
+    list-style: none;
+    width: fit-content;
+}
+
+span{
+    background: #fbfb2c78;
+    font-weight: 600;
+}

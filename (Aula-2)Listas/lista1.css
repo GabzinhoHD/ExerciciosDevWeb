@@ -1,0 +1,15 @@
+body{
+    font-size: 25px;
+    line-height: 35px;
+}
+
+span{
+    color: purple;
+}
+
+h1{ 
+    padding: 10px;
+    font-size: 30px;
+    max-width: 300px;
+    border-bottom: 1px solid #9b9b9b;
+}

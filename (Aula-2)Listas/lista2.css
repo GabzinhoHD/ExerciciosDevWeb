@@ -1,0 +1,17 @@
+body{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+ul{
+    list-style: none;
+    font-weight: 600;
+}
+
+span{
+font-weight: lighter;
+}

@@ -1,0 +1,114 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Fundo*/
+body{
+    font-family: "Ubuntu sans";
+    background-color: #cccccc;
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 440px;
+    padding-right: 440px;
+    padding-bottom: 20px;
+}
+
+.fundo{
+    background-color: white;
+    max-width: 1250px;
+}
+
+/*Cabeçalho*/
+
+#header {
+    background-color: #9af6b1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#header h1{
+    color: black;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 2px;
+    margin-left: 2px;
+    border: 1px solid #7cdf90;
+    background-color: #7fe19e;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
+    color: navy; 
+}
+
+/*Textos*/
+h1{
+    padding-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: #037253;
+}
+
+h2{
+    color: #4e4f51;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+   
+}
+
+p{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    text-indent: 1.7em;
+}
+
+h3{
+    color: black;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+ul{
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+/*Lista de disciplinas*/
+.semestre{
+    display: inline-block;
+}
+.semestre ul{
+    list-style: none;
+    padding: 0;
+}
+  
+.semestre li{
+    border: 1px solid #929eaa;
+    padding: 8px 5px 8px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.devWeb{
+    background-color: #9AF5B0;
+}
+
+#content ul{
+    padding-left: 50px;
+}
+
+/*imagem*/
+img.mapa { 
+    width: 50%;
+}
+
+

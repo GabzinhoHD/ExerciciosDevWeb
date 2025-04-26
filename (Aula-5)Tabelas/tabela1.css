@@ -1,0 +1,24 @@
+table{
+    border: 1px solid #686060;
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid #cccccc;
+    padding: 4px;
+}
+td{
+    border: 1px solid #cccccc;
+    padding: 4px;
+}
+
+.Linha1{
+    background: gray;
+    color: white;
+    padding: 1px;
+}
+
+.Linha2{
+    background-color: beige;
+}
+

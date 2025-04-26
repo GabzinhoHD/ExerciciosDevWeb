@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes 1</title>
+    <style>
+
+     .caixa{
+     display: inline-block;
+     }
+     .caixa.caixao{
+     background-color: #ddcaf8;
+     }
+     .cor1{
+     box-sizing: border-box; 
+     border: 1px solid #5a5a5a;
+     margin: 18px;
+     background-color: #ffff6b;
+     
+     }
+     .cor2{
+     box-sizing: border-box; 
+     border: 1px solid #5a5a5a;
+     margin: 18px;
+     background-color: #adfbad;
+     
+     }
+     .circulo{
+      border-radius: 80px;
+      height: 100px;
+      width: 100px;
+     }
+
+     .distancia{
+      margin-bottom: 28px;
+     }
+     </style>
+
+</head>
+<body>
+<div class = "caixa">
+   <div class = "cor1 circulo distancia"></div> 
+   <div class = "cor1 circulo distancia"></div>
+   <div class = "cor2 circulo"></div>
+   </div>
+
+<div class = "caixa caixao">
+   <div class = "cor2 circulo distancia"></div>
+   <div class = "cor2 circulo distancia"></div>
+   <div class = "cor2 circulo"></div>
+</div>
+
+<div class = "caixa">
+   <div class = "cor1 circulo distancia"></div>
+   <div class = "cor2 circulo distancia"></div>
+   <div class = "cor1 circulo"></div>
+</div>
+
+
+
+    
+</body>
+</html>
