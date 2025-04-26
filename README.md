@@ -1,4 +1,4 @@
-# Repositorio Unico para Atividades 
-Ele e dividido por branchs com cada um tendo uma atividade de desenvolvimento web.
+# Repositorio para atividades de Desenvolvimento Web(ADS 1ºSemestre)
+Anteriormente dividido por breachs, agora dividido por pastas.
 
 https://github.com/fscheidt/web1
