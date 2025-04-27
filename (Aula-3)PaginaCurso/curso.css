@@ -87,6 +87,7 @@ ul{
 .semestre{
     display: inline-block;
 }
+
 .semestre ul{
     list-style: none;
     padding: 0;
