@@ -12,54 +12,59 @@
             border: 1px solid green;
             display: grid;
             background-color: lightgreen;
-            grid-template-columns: max-content;
-            align-items: center;
-            gap: 10px;
-        }
-        label{
-            justify-self right: ;
+            grid-template-columns: max-content max-content;
+            padding: 20px;
+            max-width: 30%;
+            text-align: center;
+            
         }
         button{
-            max-width: 20%;
+            max-width: 30%;
+            margin-top: 5px;
         }
-
+        input, select{
+            max-width: fit-content;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        label{
+            text-align: right;
+        }
     </style>
     <title>Formulario</title>
 </head>
 <body>
     <form>
-        <label>Data de nascimento:
+        <label>Data de nascimento:</label> 
         <input type="date" name="data" placeholder="dd/mm/aaaa">
-        </label> 
         
-        <label>Escolaridade:
+        <label>Escolaridade:</label>
         <select name="Escolaridade">
             <option value="EF">Ensino Fundamental</option>
             <option value="EM">Ensino Medio</option>
             <option value="ES">Ensino Sperior</option>
-        </select></label> 
+        </select>
 
-        <label>Situação da Escolaridade:
-        <input type="radio" name="escolaridade">Completo
-        <input type="radio" name="escolaridade">Incompleto
-        </label>
-
-        <label>Nacionalidade:
+        <label>Situação da Escolaridade:</label>
+        <div>
+            <input type="radio" name="escolaridade">Completo
+            <input type="radio" name="escolaridade">Incompleto
+        </div>
+        <label>Nacionalidade:</label> 
         <select name="Escolaridade">
             <option value="BR">Brasil</option>
             <option value="PY">Paraguai</option>
             <option value="ARG">Argentina</option>
         </select>
-        </label> 
-
-        <label>UF onde nasceu: 
+        
+        <label>UF onde nasceu:</label>
         <select name="Escolaridade">
             <option value="PR">Paraná</option>
             <option value="SC">Santa Catarina</option>
             <option value="RS">Rio Grande do Sul</option>
         </select>
-        </label>
-        <button>Enviar</button>
+    
+    <button>Enviar</button>
     <form>
 
 </body>
