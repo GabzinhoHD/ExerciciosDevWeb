@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario-2</title>
+    <style>
+        form{
+            display: grid;
+            grid-template-columns: max-content max-content;
+            max-width: 40%;
+        }
+
+        input, select, textarea, button{
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        label{
+            text-align: right;
+        }
+        button{
+            max-width: fit-content;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Nome</label> 
+        <input type="text" name="nome" placeholder="Nome">
+        
+        <label>Email</label>
+        <input type="email" name="email" placeholder="user@exemple.org">
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="6 caracteres">
+        
+        <label>Possui conhecimento?</label> 
+        <div>
+            <input type="checkbox" name="conhecimento" value="1">JavaScript
+            <input type="checkbox" name="conhecimento" value="2">HTML
+            <input type="checkbox" name="conhecimento" value="3">CSS
+        </div>
+        
+        <label>Curso</label>
+        <select name="Escolaridade">
+            <option value="none">--Selecione--</option>
+            <option value="AD">Análise e desenvolvimento</option>
+            <option value="F">Física</option>
+            <option value="M">Matemática</option>
+        </select>
+
+        <label>Turno</label>
+        <div>
+            <input type="radio" name="turno" >Tarde
+            <input type="radio" name="turno">Noite
+        </div>
+
+        <label>Motivo Matrícula</label>
+        <textarea cols="20" rows="5" name="comentario"></textarea>
+        <p></p>
+        <button>enviar</button>
+    <form>
+</body>
+</html>
