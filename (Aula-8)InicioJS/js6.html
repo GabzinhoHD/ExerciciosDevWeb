@@ -11,15 +11,15 @@
         let valor = prompt("Digite o valor do carro: ");
         let ano = Number(prompt("Digite o ano de fabricação: "));
 
-        if(ano >= 2022){
+        if(ano > 2022){
             let seguro = valor * 0.05;
             alert("O valor do seguro é: " + seguro);
         }
-        else if(ano > 2018 && ano < 2022){
+        else if(ano >= 2018 && ano <= 2022){
             let seguro = valor * 0.1;
             alert("O valor do seguro é: " + seguro);
         }
-        else if(ano <= 2018){
+        else if(ano < 2018){
             let seguro = valor * 0.15;
             alert("O valor do seguro é: " + seguro);
         }
