@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <style>
+        p {font-weight: bold;}
+    </style>
+    <title>JS- parte 1</title>
+</head>
+<body>
+    <p>Introduçao ao JavaScript</p>
+</body>
+<script>
+    /* Declaraçao de variaveis */
+    let mensagem = "Hello World"; // variavel: string
+    let ano = 2025; // variavel: number 
+    let  pi = 3.1416 // variavel: number(float)
+    let is_aula_web1 = true; // variavel: booleana
+
+    /* funcao para verificar o tipo da variavel */
+    console.log(typeof(mensagem));
+
+    /* Informando a data atual */
+    let dataAtual = new Date().toLocaleDateString();
+    let hora = new Date().toLocaleTimeString();
+
+    console.log(dataAtual); // No Console
+    console.log(hora);  // No Console
+    document.writeln(hora);
+    document.writeln("<br><b>" + hora + "<b>"); // concatenaçao entre a tag<b> e o valor hora
+
+    /*  Usando de laço de repetiçao (for) */
+    for(i = 0 ; i<10 ; i++){
+        document.writeln("<br><b>" + hora + "<b>");
+    }
+
+    /* Lendo um valor do usuario */
+    let idade = Number(prompt("Digite sua idade:"));
+    alert("Sua idade:" + idade);
+    
+</script>
+</html>
