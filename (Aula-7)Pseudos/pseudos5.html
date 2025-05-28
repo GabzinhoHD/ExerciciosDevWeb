@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-5</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li::before{
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url(Validacao.jpeg);
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Maria Silva</li>
+        <li>João Paulo</li>
+        <li>Luciana Carvalho</li>
+        <li>Teresa Mendes</li>
+        <li>Osvaldo Martins</li>
+    </ul>
+</body>
+</html>
