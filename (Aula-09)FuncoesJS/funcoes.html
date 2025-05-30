@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+    <style>
+        button{
+            display: grid;
+            margin: 50px;
+            font-size: 120px;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
 
+        let valor = Number(prompt("Digite um valor: "));
+        
+        let x = 100; //variavel global
+
+        /* Define funçao */
+        function calcularDesconto(valor){
+            let novoValor = valor * 0.9; // variavel local
+            alert("Valor com desconto: " + novoValor);
+            return novoValor;
+        }
+
+        function calcular(valor){
+            alert("Calculando..." + valor);
+        }
+        function mostraDesconto(){
+            let desc = calcularDesconto(400);
+            alert("Valor com desconto" + desc);
+            document.writeln(desc);
+        }
+
+        // calcular(); //chama função
+        // calcular(88)
+
+    </script>
+    
+    <button onclick="calcular(valor)">Executar</button>
+    <button onclick="calcularDesconto(valor)">10% Desconto</button>
+
+</body>
+</html>

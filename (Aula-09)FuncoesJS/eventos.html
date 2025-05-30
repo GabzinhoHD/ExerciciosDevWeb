@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        div{
+            margin-left: 40%;
+            border: 1px solid black;
+            background-color: lightgray;
+            width: fit-content;
+            padding: 15px;
+        }
+        
+        p{
+            font-size: 50px;
+        }
+    </style>
+    <script>
+        function calcularDesconto(valor){
+            let desconto = valor * 0.9;
+            console.log(desconto);
+            // Define o conteudo
+            document.querySelector("#desc").innerHTML ="R$" + desconto.toFixed(2);
+
+            //Equivalente a:
+            let p = document.querySelector("#desc");
+            p.innerHTML ="R$" + desconto.toFixed(2);
+            p.style.backgroundColor = "yellow";
+
+            return desconto;
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>Desconto</p>
+        <p id="desc">R$ 0,00</p>
+        <input type="number" placeholder="Digite um valor" onkeyup = "calcularDesconto(this.value)">
+    </div>
+
+</body>
+</html>
