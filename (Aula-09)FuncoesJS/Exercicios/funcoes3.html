@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcoes-3</title>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 350px 350px;
+            margin: 0 auto;
+        }
+        .bloco{
+            border: 1px solid #cccccc;
+        }
+        .caixa{
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin: 15px 10px 15px 8px;
+            border: 1px solid #cccccc;
+        }
+        h2{
+            font-weight: normal;
+            margin: 0;
+            margin: 8px;
+        }
+        p{
+            margin: 8px;
+        }
+
+        .vermelho{
+            background-color: red;
+        }
+        .azul{
+            background-color: lightblue;
+        }
+        .amarelo{
+            background-color: yellow;
+        }
+        .verde{
+            background-color: green;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="opcoes bloco">
+            <h2>Opções de cores</h2>
+            <div class="caixa vermelho" onmouseover="corCaixa(1)"></div>
+            <div class="caixa azul" onmouseover="corCaixa(2)"></div>
+            <div class="caixa amarelo" onmouseover="corCaixa(3)"></div>
+            <div class="caixa verde" onmouseover="corCaixa(4)"></div>
+        </div>
+
+        <div class="bloco"></div>
+
+        <div id="p1" class="bloco">
+            <p>1- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit eiusmod in pellentesque massa placerat duis ultricies lacus sed.</p>
+        </div>
+
+        <div id="p2" class="bloco">
+            <p>2 - Orci ac auctor augue mauris augue. Habitant morbi tristique senectus et netus. Viverra orci sagittis eu volutpat odio facilisis mauris sit. Lacus luctus accumsan tortor posuere ac. Curabitur vitae nunc sed velit. Amet nisl purus in mollis nunc. Arcu dui vivamus arcu felis bibendum ut.</p>
+        </div>
+
+        <div id="p3" class="bloco">
+            <p>3 - Sed felis eget velit aliquet sagittis id consectetur. Venenatis tellus in metus vulputate eu scelerisque felis. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Et ligula ullamcorper malesuada proin libero.</p>
+        </div>
+
+        <div id="p4" class="bloco">
+            <p>4 - Nibh venenatis cras sed felis eget. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Cras ornare arcu dui vivamus arcu. Dignissim diam quis enim lobortis scelerisque fermentum</p>
+        </div>
+    </div>
+</body>
+<script>
+    function corCaixa(cor){
+        
+        if(cor == 1){
+            document.querySelector("#p1").style.backgroundColor = "red";
+        }
+        else if(cor == 2){
+            document.querySelector("#p2").style.backgroundColor = "lightblue";
+        }
+        else if(cor == 3){
+            document.querySelector("#p3").style.backgroundColor = "yellow";
+        }
+        else if(cor == 4){
+            document.querySelector("#p4").style.backgroundColor = "green";
+        }
+    }
+</script>
+</html>

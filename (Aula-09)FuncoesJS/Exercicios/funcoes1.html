@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funcoes/Eventos-1</title>
-    <script>
-        
-    </script>
+    
 </head>
 <body>
-    
+    <button onclick="mudarCor('blue')">azul</button>
+    <button onclick="mudarCor('green')">verde</button>
+    <button onclick="mudarCor('red')">vermelho</button>
 </body>
+<script>
+    function mudarCor(valor){
+        document.style.backgroundColor = valor;
+    }
+</script>
 </html>
