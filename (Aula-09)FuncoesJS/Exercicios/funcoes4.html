@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcoes-4</title>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <h1>Orçamento</h1>
+    <div>
+        <label>Item: </label>
+        <input type="text" id="item">
+        <label>valor: </label>
+        <input type="number" id="valor">
+        <label>quantidade: </label>
+        <input type="number" id="quantidade">
+        <button onclick="calculoTotal()">=</button>
+        <span id="total">R$ 0.00</span>
+    </div>
+
+</body>
+<script>
+    function calculoTotal(){
+        let valor = document.querySelector("#valor").value;
+        let quantidade = document.querySelector("#quantidade").value;
+        let total = valor * quantidade;
+        document.querySelector("#total").innerHTML = "R$ " + total.toFixed(2);
+    }
+</script>
+</html>
