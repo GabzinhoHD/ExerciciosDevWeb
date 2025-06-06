@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* Declarando um array */
+    let alunos = ["Adriano", "Antonio"];
+    console.log(alunos);
 
+    // Tamanho do array
+    console.log(alunos.length);
+    
+    /* Adicionar um item no array*/
+    // Funcao push
+    alunos.push("Breno");
+    console.log(alunos[2]);
+
+    /* Removendo um item da array */
+    // Funcao pop
+    alunos.pop();
+    console.log(alunos);
+
+    /* Percorrendo os itens do array */
+    // Usando for
+    for(let i = 0; i <alunos.length; i++){
+        console.log[i];
+    };
+
+    // Usando forEach
+    console.log("# forEach");
+    alunos.forEach(e=>console.log(e)); //e == alunos[i]
+
+    /* Organizando a array */
+    alunos.sort() // Organiza a array em ordem alfabetica
+    alunos.reverse() // Organiza invertendo a ordem alfabetica
+
+</script>
+</html>

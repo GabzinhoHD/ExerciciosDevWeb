@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrossel</title>
+    
+</head>
+<body>
+    <div>
+        <button onclick="anterior()">prev</button>
+        <button onclick="proximo()">next</button>
+    </div>
+    <p></p>
+    <img src="" id="image">
+</body>
+<script>
+    const paises = ["../imagens/china.png", "../imagens/germany.png", "../imagens/india.png", "../imagens/slovakia.png", "../imagens/sweden.png"];
+    
+    let i = 0;
+    image.src = paises[0];
+    function proximo(){
+        i++;
+        image.src = paises[i];
+        if(i > 4){
+            image.src = paises[0];
+            i = 0;
+        }
+    }
+
+    function anterior()
+</script>
+</html>
