@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // aguarda carregar o HTML
+        window.onload = () => {
 
+            /* Selecionar um elemento*/
+            // usando getElementById
+            let divB = document.getElementById("mensagem"); 
+            divB.innerText = "conteúdo div B";
+
+            // usando QuerySelector
+            divB = document.querySelector("#mensagem"); // por Id
+            divB.innerText = "DIV B";
+
+            let divC = document.querySelector(".mensagem"); // por Classe
+            divC.innerText = "DIV C";
+
+            let divA = document.querySelector("div"); // pela Tag
+            divA.innerText = "DIV A";
+
+            /* Adicionando um evento(click) ao button */
+            document.querySelector("button").addEventListener("click", ()=>{
+                // Obtendo o input
+                let input = document.querySelector("input");
+
+                if(input.getAttribute("type") == "password"){
+                    document.querySelector("input").setAttribute("type", "text");
+                }
+
+                else{
+                    document.querySelector("input").setAttribute("type", "password");
+                }
+
+
+            /* Selecionado todos os elementos iguais */
+            let arrayDiv = document.querySelectorAll("div");
+            arrayDiv.forEach(div => {
+                div.style.border= "1px solid black";
+            });
+            });
+        }   
+    </script>
+</head>
+<body>
+    <div>A</div>
+    <div id="mensagem"></div>
+    <div class="mensagem"></div>
+    <input type="password" value="1234"> <button>VER</button>
+
+    
+</body>
+</html>
