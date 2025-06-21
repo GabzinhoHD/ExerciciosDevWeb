@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-2</title>
+    <style>
+        form{
+            display: grid;
+            grid-template-columns: max-content min-content;
+            border: 1px solid green;
+            margin: 25px;
+            padding: 20px 20px 40px 20px;
+            width: 70%;
+        }
+        label{
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preencha o formulario:</h1>
+    <form>
+        <label>Nome:</label>
+        <input type="text" id="nome">
+        <label>CPF:</label>
+        <input type="number" id="cpf">
+        <label>Email:</label>
+        <input type="text" id="email">
+        <button>enviar</button>
+    </form>
+</body>
+<script>
+
+    document.querySelector("form").addEventListener("submit", () => {
+        event.preventDefault(); //Impede o envio e recarregamento da página
+
+        /* Declaração dos campos */
+        let nome = document.querySelector("#nome").value;
+        let cpf = document.querySelector("#cpf").value;
+        let email = document.querySelector("#email").value;
+
+        /* Validação dos campos */
+        // Para tudo correto
+        if(nome.length >= 3 && cpf.length == 11 && email.length >= 4){
+            alert("Tudo Válido!!");
+        }
+
+        // Para algo errado
+        else{
+            
+            if(nome.length < 3){
+                alert("Erro no campo nome! (min. 3 letras)");
+            }
+            
+            if(cpf.length != 11){
+                alert("Erro no campo cpf! (exatos 11 numeros)");
+            }
+            
+            if(email.length < 4){
+                alert("Erro no campo email! (min. 4 caracteres)");
+            }
+        }
+    });
+</script>
+</html>
