@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de conceitos</title>
+    <style>
+        /* Limpar os espaçamentos do browser */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            border: 1px solid gray;
+            padding: 10px;
+            padding-left: 25px;
+            width: 50%;
+            margin: 10px;
+        }
+        /* Tabela dos valores */
+        table{
+            border-collapse: collapse;
+        }
+        td{
+           padding-right: 8px;
+        }
+        /* Apenas para deixar o [0] alinhado com os demais valores */
+        td:nth-child(2){
+            text-align: end;
+        }
+        /*Deixando a ultima celula maior(alinhando com o "titulo") */
+        td:last-child{
+            width: 133px;
+        }
+
+        /* Calculadora */
+        h1{
+            color: navy;
+            margin: 20px 0;
+        }
+        .notas{
+            display: grid;
+            grid-template-columns: min-content min-content min-content;
+            font-size: 22px;
+            
+        }
+        /* Apenas o texto das notas em cinza */
+        .p_nota{
+            color: #73727e;
+        }
+        input{
+            width: 75px;
+            margin-right: 48px;
+        }
+
+        .resultado{
+            margin-top: 10px;
+        }
+
+        #conceito{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tabela dos valores -->
+        <table>
+            <p>Intervalo de valores e conceitos</p>
+            <tr id="conceito1">
+                <td>A</td><td>9.0</td><td>-</td><td>10</td>
+            </tr>
+            <tr id="conceito2">
+                <td>B</td><td>7.5</td><td>-</td><td>8.9</td>
+            </tr>
+            <tr id="conceito3">
+                <td>C</td><td>6.0</td><td>-</td><td>7.4</td>
+            </tr>
+            <tr id="conceito4">
+                <td>D</td><td>0</td><td>-</td><td>5.9</td>
+            </tr>
+        </table>
+
+        <!-- Calculadora -->
+        <h1>Calculadora de conceito</h1>
+        <div class="notas">
+            <div>
+                <p class="p_nota">Nota 1</p>
+                <input id="nota1" type="number">
+            </div>
+           <div>
+                <p class="p_nota">Nota 2</p>
+                <input id="nota2" type="number">
+            </div>
+            <div>
+                <p class="p_nota">Nota 3</p>
+                <input id="nota3" type="number">
+            </div>
+            <div></div>
+            <!--Mostra dos resultados-->
+            <div class="resultado">
+                <p>Conceito</p>
+                <p>Média</p>
+            </div>
+            <div class="resultado">
+                <p id="conceito"></p>
+                <p id="media"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll("input").forEach((input)=>{
+        input.addEventListener("input",()=>{
+            /* Declaração dos valores */
+            let nota1 = parseFloat(document.querySelector("#nota1").value) || 0; // "|| 0" no final para que nao apareça o NaN
+            let nota2 = parseFloat(document.querySelector("#nota2").value) || 0;
+            let nota3 = parseFloat(document.querySelector("#nota3").value) || 0;
+
+            /* Calculo da Media */
+            let media = ((nota1 + nota2 + nota3) / 3);  
+             
+            if(media > 10){
+                media = 10; // Limita o valor maximo da media
+            }
+            document.querySelector("#media").innerHTML = media.toFixed(2);
+            
+            /* Definindo o Conceito */
+            // Limpa a color da tabela toda vez que os valores são alterados
+            for(let i = 1; i <= 4; i++){
+                document.querySelector("#conceito" + i).style.backgroundColor = "";
+            }
+
+            let conceito = "";
+            if(media >= 9) {
+                conceito = "A";
+                document.querySelector("#conceito1").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
+                document.querySelector("#conceito").style.color = "#004b23" // Cor da letra
+            } 
+            else if(media >= 7.5) {
+                conceito = "B";
+                document.querySelector("#conceito2").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
+                document.querySelector("#conceito").style.color = "#01497c" // Cor da letra
+            } 
+            else if(media >= 6) {
+                conceito = "C";
+                document.querySelector("#conceito3").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
+                document.querySelector("#conceito").style.color = "#621708" // Cor da letra
+            } 
+            else{
+                conceito = "D";
+                document.querySelector("#conceito4").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
+                document.querySelector("#conceito").style.color = "#941b0c" // Cor da letra
+            }
+
+            document.querySelector("#conceito").innerHTML = conceito;
+        
+    })});
+</script>
+</html>
