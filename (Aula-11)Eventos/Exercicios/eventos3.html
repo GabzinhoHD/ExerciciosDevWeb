@@ -16,13 +16,13 @@
 <script>
     document.querySelector("button").addEventListener("click", () =>{
         
-        let novaTarefa = document.querySelector("#adicionar").value;
-        let lista = document.querySelector("#listaTarefas");
+        let novaTarefa = document.querySelector("#adicionar").value; // Declarando o texto
+        let lista = document.querySelector("#listaTarefas"); // Declarando a lista
 
-        let item = document.createElement("li"); // Criando um item da lista
-        item.textContent = novaTarefa; // Vinculando o texto ao item
-
-        lista.appendChild(item); // Adicionando na lista
+        // O item da lista só e criado se tiver ao escrito
+        if(novaTarefa!= ""){
+            lista.innerHTML += "<li>" + novaTarefa + "</li"; // Criando um item da lista
+        }
 
         document.querySelector("input").value = ""; // Limpando o input
     });
