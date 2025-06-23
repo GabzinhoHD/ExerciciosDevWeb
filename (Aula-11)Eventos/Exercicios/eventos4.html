@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcoes-5</title>
+    <style>
+    /* Espaçamentos */
+    body {
+      padding: 10px;
+    }
+    div{
+        margin-bottom: 20px;
+    }
+    input{
+        padding: 5px;
+    }
+
+    /* Tamanho dos input's */
+    .valor{
+        max-width: 60px;
+    }
+    .quantidade{
+        max-width: 45px;
+    }
+
+    /* Mostrando os resultados */
+    .total {
+      background-color: #90ee90;
+      padding: 5px 30px;
+    }
+    .valorTotal{
+      background-color: #87cefa;
+      padding: 20px 140px 20px 20px;
+      font-size: 30px;
+    }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Orçamento</h1>
+    <!--Campos do Item 1-->
+    <div>
+        <label>Item: </label>
+        <input type="text" id="item">
+        <label>valor: </label>
+        <input class="valor" type="number" id="valor1">
+        <label>quantidade: </label>
+        <input class="quantidade" type="number" id="quantidade1">
+        <span class="total" id="total1">R$ 0.00</span>
+    </div>
+
+    <!--Campos do Item 2-->
+    <div>
+        <label>Item: </label>
+        <input type="text" id="item">
+        <label>valor: </label>
+        <input class="valor" type="number" id="valor2">
+        <label>quantidade: </label>
+        <input class="quantidade" type="number" id="quantidade2">
+        <span class="total" id="total2">R$ 0.00</span>
+    </div>
+
+    <!--Campos do Item 3-->
+    <div>
+        <label>Item: </label>
+        <input type="text" id="item">
+        <label>valor: </label>
+        <input class="valor" type="number" id="valor3">
+        <label>quantidade: </label>
+        <input class="quantidade" type="number" id="quantidade3">
+        <span class="total" id="total3">R$ 0.00</span>
+    </div>
+
+    <!--Resultado Total-->
+    <div class="valorTotal">
+        <span id="valorTotal">Valor Total: R$ 0.00</span>
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll("input").forEach((input)=>{
+        input.addEventListener("input", () =>{
+        /* Calculando total do item 1*/
+        // Declarações do item 1
+        let valor1 = parseFloat(document.querySelector("#valor1").value || 0);
+        let quantidade1 = parseFloat(document.querySelector("#quantidade1").value || 0);
+
+        // Calculando total 1 (valor * quantidade)
+        let total1 = valor1 * quantidade1;
+        document.querySelector("#total1").innerHTML = "R$ " + total1.toFixed(2);
+    
+        /* Calculando total do item 2*/
+        // Declarações do item 2
+        let valor2 = parseFloat(document.querySelector("#valor2").value || 0);
+        let quantidade2 = parseFloat(document.querySelector("#quantidade2").value || 0);
+
+        // Calculando total 2(valor * quantidade)
+        let total2 = valor2 * quantidade2;
+        document.querySelector("#total2").innerHTML = "R$ " + total2.toFixed(2);
+
+        /* Calculando total do item 3*/
+        // Declarações do item 3
+        let valor3 = parseFloat(document.querySelector("#valor3").value || 0);
+        let quantidade3 = parseFloat(document.querySelector("#quantidade3").value || 0);
+
+        // Calculando total 3 (valor * quantidade)
+        let total3 = valor3 * quantidade3;
+        document.querySelector("#total3").innerHTML = "R$ " + total3.toFixed(2);
+    
+        /* Calculando total final*/
+        let valorTotal = total1 + total2 +  total3;
+        document.querySelector("#valorTotal").innerHTML = "Valor Total: R$ " + valorTotal.toFixed(2);
+
+        })});
+        
+</script>
+</html>
