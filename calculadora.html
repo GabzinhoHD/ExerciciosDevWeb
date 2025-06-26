@@ -11,6 +11,7 @@
             padding: 0;
         }
 
+        /* Borda + Espaçamentos */
         .container{
             border: 1px solid gray;
             padding: 10px;
@@ -18,6 +19,7 @@
             width: 50%;
             margin: 10px;
         }
+
         /* Tabela dos valores */
         table{
             border-collapse: collapse;
@@ -39,6 +41,7 @@
             color: navy;
             margin: 20px 0;
         }
+        /* Alinhamento de todos os campos em 3 colunas */
         .notas{
             display: grid;
             grid-template-columns: min-content min-content min-content;
@@ -49,6 +52,7 @@
         .p_nota{
             color: #73727e;
         }
+
         input{
             width: 75px;
             margin-right: 48px;
@@ -85,19 +89,26 @@
         <!-- Calculadora -->
         <h1>Calculadora de conceito</h1>
         <div class="notas">
+            <!--Nota 1-->
             <div>
                 <p class="p_nota">Nota 1</p>
                 <input id="nota1" type="number">
             </div>
+
+            <!--Nota 2-->
            <div>
                 <p class="p_nota">Nota 2</p>
                 <input id="nota2" type="number">
             </div>
+
+            <!--Nota 3-->
             <div>
                 <p class="p_nota">Nota 3</p>
                 <input id="nota3" type="number">
             </div>
-            <div></div>
+
+            <div><!--Essa div serve para não quebrar o alinhamento do grid--></div>
+
             <!--Mostra dos resultados-->
             <div class="resultado">
                 <p>Conceito</p>
@@ -111,7 +122,9 @@
     </div>
 </body>
 <script>
+    /* Selecionando todas os input's*/
     document.querySelectorAll("input").forEach((input)=>{
+        /* Adicionando um evento(input) aos input's */
         input.addEventListener("input",()=>{
             /* Declaração dos valores */
             let nota1 = parseFloat(document.querySelector("#nota1").value) || 0; // "|| 0" no final para que nao apareça o NaN
@@ -124,37 +137,42 @@
             if(media > 10){
                 media = 10; // Limita o valor maximo da media
             }
-            document.querySelector("#media").innerHTML = media.toFixed(2);
+            document.querySelector("#media").innerHTML = media.toFixed(2); // Mostrando a Media
             
             /* Definindo o Conceito */
+            let conceito = "";
+
             // Limpa a color da tabela toda vez que os valores são alterados
             for(let i = 1; i <= 4; i++){
                 document.querySelector("#conceito" + i).style.backgroundColor = "";
             }
 
-            let conceito = "";
+            // conceito = A
             if(media >= 9) {
                 conceito = "A";
                 document.querySelector("#conceito1").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
                 document.querySelector("#conceito").style.color = "#004b23" // Cor da letra
-            } 
+            }
+            // Conceito = B
             else if(media >= 7.5) {
                 conceito = "B";
                 document.querySelector("#conceito2").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
                 document.querySelector("#conceito").style.color = "#01497c" // Cor da letra
             } 
+            // Conceito = C
             else if(media >= 6) {
                 conceito = "C";
                 document.querySelector("#conceito3").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
                 document.querySelector("#conceito").style.color = "#621708" // Cor da letra
             } 
+            // Conceito = D
             else{
                 conceito = "D";
                 document.querySelector("#conceito4").style.backgroundColor = "yellow"; // Cor do fundo da linha respectiva ao conceito
                 document.querySelector("#conceito").style.color = "#941b0c" // Cor da letra
             }
 
-            document.querySelector("#conceito").innerHTML = conceito;
+            document.querySelector("#conceito").innerHTML = conceito; // Mostrando o Conceito
         
     })});
 </script>
