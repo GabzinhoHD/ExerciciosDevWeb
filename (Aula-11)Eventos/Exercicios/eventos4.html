@@ -44,7 +44,7 @@
     <!--Campos do Item 1-->
     <div>
         <label>Item: </label>
-        <input type="text" id="item">
+        <input type="text" id="item1">
         <label>valor: </label>
         <input class="valor" type="number" id="valor1">
         <label>quantidade: </label>
@@ -55,7 +55,7 @@
     <!--Campos do Item 2-->
     <div>
         <label>Item: </label>
-        <input type="text" id="item">
+        <input type="text" id="item2">
         <label>valor: </label>
         <input class="valor" type="number" id="valor2">
         <label>quantidade: </label>
@@ -66,7 +66,7 @@
     <!--Campos do Item 3-->
     <div>
         <label>Item: </label>
-        <input type="text" id="item">
+        <input type="text" id="item3">
         <label>valor: </label>
         <input class="valor" type="number" id="valor3">
         <label>quantidade: </label>
@@ -81,7 +81,9 @@
 
 </body>
 <script>
+    /* Selecionando todos os input's */
     document.querySelectorAll("input").forEach((input)=>{
+        /* Adicionando o evento(input) aos input's */
         input.addEventListener("input", () =>{
         /* Calculando total do item 1*/
         // Declarações do item 1
