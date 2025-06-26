@@ -88,7 +88,7 @@
         input.addEventListener("input", () =>{
         /* Calculando total do item 1*/
         // Declarações do item 1
-        let valor1 = parseFloat(document.querySelector("#valor1").value || 0);
+        let valor1 = parseFloat(document.querySelector("#valor1").value || 0); // "|| 0" no final para que nao apareça o NaN
         let quantidade1 = parseFloat(document.querySelector("#quantidade1").value || 0);
 
         // Calculando total 1 (valor * quantidade)
