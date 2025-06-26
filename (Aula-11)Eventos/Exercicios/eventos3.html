@@ -14,6 +14,7 @@
     </ol>
 </body>
 <script>
+    /* Adicionando um evento(click) ao button */
     document.querySelector("button").addEventListener("click", () =>{
         
         let novaTarefa = document.querySelector("#adicionar").value; // Declarando o texto
@@ -21,7 +22,7 @@
 
         // O item da lista só e criado se tiver ao escrito
         if(novaTarefa != ""){
-            lista.innerHTML += "<li>" + novaTarefa + "</li"; // Criando um item da lista
+            lista.innerHTML += "<li>" + novaTarefa + "</li>"; // Inserindo um item na lista
         }
 
         document.querySelector("input").value = ""; // Limpando o input
