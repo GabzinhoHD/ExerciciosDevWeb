@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eventos-1</title>
     <style>
+        /* Campos dos numeros */
         p, input{
             border: 1px solid #cccccc;
             width: 50px;
             display: inline-block;
             padding: 2px;
         }
+
+        /* Espaçamento entre o botão e a span */
         span{
             margin-top: 10px;
         }
 
     </style>
     <script>
-        let soma;
+        let soma; // Declarando "soma" fora da função para ser global
         function gerarNumeros(){
             /* Gerando os numeros aleatorios de 0 a 100 */
-            const num1 = parseInt(Math.random() * 101);
-            const num2 = parseInt(Math.random() * 101);
+            let num1 = parseInt(Math.random() * 101);
+            let num2 = parseInt(Math.random() * 101);
 
             /* Inserindo os valores na pagina */
             document.querySelector(".num1").innerText = num1;
@@ -32,21 +35,23 @@
             /* Calculando a soma */
             soma = num1 + num2; 
             console.log(soma);
-
         }
-
+        /*Quando carregar a pagina: */
         window.onload = () =>{
-            gerarNumeros();
+            gerarNumeros(); // Chamando a função gerarNumeros
             
             /* Adicionando um evento(click) ao button */
             document.querySelector("button").addEventListener("click", ()=>{
                 // Obtendo o input(valor)
                 let resposta = Number(document.querySelector("input").value);
-                // Validação da resposta!!
+
+                /* Validação da resposta! */
+                // Se acertar
                 if(resposta == soma){
                     document.querySelector("span").innerText = "Parabéns";
                     gerarNumeros(); // Gerando nova soma
                 }
+                // Se errar
                 else{
                     document.querySelector("span").innerText = "Errou! Tente Novamente";
                 }
@@ -61,6 +66,6 @@
         <input type="number" placeholder="?">
         <button>verificar</button>
     </div>
-    <span></span>
+    <span><!--A mensagem aparecera aqui--></span>
 </body>
 </html>
