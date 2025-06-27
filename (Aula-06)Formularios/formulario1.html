@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Formulario-1</title>
     <style>
-        body{
-            color:navy;
-        }
+        /*Disposição + borda do form*/
         form{
-            border: 1px solid green;
             display: grid;
-            background-color: lightgreen;
             grid-template-columns: max-content max-content;
+            /* Borda */
+            border: 1px solid green;
+            background-color: lightgreen;
+            /* Alinhamentos */
             padding: 20px;
-            max-width: 25%;
+            width: 40%;
             text-align: center;
-            
         }
-        button{
-            max-width: 30%;
-            margin-top: 5px;
-        }
+        
         input, select{
-            max-width: fit-content;
+            width: fit-content; /* Tamanho limitado ao espaço do proprio campo */
+            /* Espaçamentos */
             margin-left: 10px;
             margin-bottom: 10px;
         }
+
+        /* Textos */
         label{
-            text-align: right;
+            text-align: end;
+            color: navy;
         }
-        .escolaridade{
-            color: black;
+
+        button{
+            width: 30%;
+            margin-top: 5px;
         }
     </style>
-    <title>Formulario</title>
 </head>
 <body>
     <form>
+        <!--Data de Nascimento-->
         <label>Data de nascimento:</label> 
         <input type="date" name="data" placeholder="dd/mm/aaaa">
-        
+
+        <!--Escolaridade-->
         <label>Escolaridade:</label>
         <select name="Escolaridade">
             <option value="EF">Ensino Fundamental</option>
@@ -48,11 +52,15 @@
             <option value="ES">Ensino Sperior</option>
         </select>
 
+        <!--Situação da escolaridade-->
         <label>Situação da Escolaridade:</label>
-        <div class="escolaridade">
+        <div>
+            <!--Dentro da div para na quebrar o grid-->
             <input type="radio" name="escolaridade">Completo
             <input type="radio" name="escolaridade">Incompleto
         </div>
+
+        <!--Nacionalidade-->
         <label>Nacionalidade:</label> 
         <select name="Escolaridade">
             <option value="BR">Brasil</option>
@@ -60,6 +68,7 @@
             <option value="ARG">Argentina</option>
         </select>
         
+        <!--UF de nascimento-->
         <label>UF onde nasceu:</label>
         <select name="Escolaridade">
             <option value="PR">Paraná</option>
@@ -69,6 +78,5 @@
     
     <button>enviar</button>
     <form>
-
 </body>
 </html>
