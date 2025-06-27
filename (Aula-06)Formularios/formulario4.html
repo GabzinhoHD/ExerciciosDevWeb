@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario-4</title>
+  <style>
+    /* Limpa dos espaçamentos do browser(A imagem ocupar a pagina toda) */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Tratamento da imagem de fundo */
+    body{
+        background-image: url('fundo.png'); /* Substitua pelo nome correto do arquivo */
+        background-size: cover; /* Faz com que a imagem de fundo cubra toda a área do body */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Impede que a imagem de fundo se repita automaticamente */
+        height: 100%; /* O valor 100% significa que a imagem tem altura da janela de visualização */
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{
+        border: 1px solid #6ab7b6;
+        background-color: rgba(93, 142, 163, 0.3); /* Cor com transparência */
+        width: 45%;
+        padding: 30px;
+        font-size: larger;
+        /* Alinha o container no centro */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:  60px;
+    }
+
+    /* Disposição do form */
+    form{
+        display: grid;
+        grid-template-columns: min-content max-content;
+    }
+
+    /* Textos */
+    p{ /* Titulo */
+        color: white;
+        font-weight: none;
+        padding-left: 215px;
+        margin-bottom: 20px;
+    }
+    label{ /* Identificação dos campos */
+        color: #6ab7b6;
+        text-align: end;
+        margin-right: 8px;
+    }
+    .conjunto label{
+        margin-left: 8px; /* Alinhando os texto da ultima linha */
+    }
+
+    /* Campos de valores */
+    input, select{
+        border: 2px solid #0b5178;
+        box-shadow: 4px 4px 6px rgba(11,81,120, 0.7); /* Implementa a sombra com opaciadade */
+        margin-bottom: 8px;
+    }
+    .idade{ width: 75px; } /* Tamanho do input idade */
+    .ddd{width: 50px;} /* Tamanho do input DDD */
+    button{ width: 75px; } /* Tamanho do botão */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Cadastro usuário</p>
+    <form>
+        <!--Nome-->
+        <label>Nome</label>
+        <input type="text">
+
+        <!--Email-->
+        <label>Email</label>
+        <input type="email">
+
+        <!--Nascimento-->
+        <label>Nascimento</label>
+        <input type="date">
+
+        <!--Pais-->
+        <label>Pais</label>
+        <select>
+            <!--Paises da America-->
+            <option>Selecione</option>
+            <option value="ARG">Argentina</option>
+            <option value="BHS">Bahamas</option>
+            <option value="BRB">Barbados</option>
+            <option value="BLZ">Belize</option>
+            <option value="BOL">Bolívia</option>
+            <option value="BRA">Brasil</option>
+            <option value="CAN">Canadá</option>
+            <option value="CHL">Chile</option>
+            <option value="COL">Colômbia</option>
+            <option value="CRI">Costa Rica</option>
+            <option value="CUB">Cuba</option>
+            <option value="ECU">Equador</option>
+            <option value="USA">Estados Unidos</option>
+            <option value="GTM">Guatemala</option>
+            <option value="JAM">Jamaica</option>
+            <option value="MEX">México</option>
+            <option value="PAN">Panamá</option>
+            <option value="PER">Peru</option>
+            <option value="DOM">República Dominicana</option>
+            <option value="URY">Uruguai</option>
+        </select>
+
+        <!--Idade + div para os demais campos ficarem na segunda coluna-->
+        <label>Idade</label>
+        <div class="conjunto">
+            <input class="idade" type="number">
+            <label>DDD</label>
+            <input  class="ddd" type="number">
+            <label>Telefone</label>
+            <input type="number">
+        </div>
+
+        <div><!--Essa div serve deixar o button na segunda coluna da grid--></div>
+        <button>Adicionar</button>
+    </form>
+  </div>
+</body>
+</html>
