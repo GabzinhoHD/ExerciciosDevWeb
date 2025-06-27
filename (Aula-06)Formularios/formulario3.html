@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario-3</title>
     <style>
+        /* Disposição do form */
         form{
             display: grid;
             grid-template-columns: max-content max-content;
-            max-width: 40%;
         }
 
+        /* Espaçamentos dos input's */
         input{
             margin-left: 10px;
             margin-bottom: 10px;
         }
         
+        /* Aliinhamento do texto */
         label{
-            text-align: right;
+            text-align: end;
         }
         
+        /* Validação das inputs */
         input:required:invalid{
-            color: red;
+            color: red; /* Se for invalido fica vermelhinho */
         }
     </style>
 </head>
 <body>
     <form>
+        <!--Nome-->
         <label>Nome</label> 
         <input type="text" minlength="3" name="nome" placeholder="Nome" required>
         
+        <!--Email-->
         <label>Email</label>
         <input type="email" name="email" placeholder="user@exemple.org" required>
 
+        <!--Senha-->
         <label>Password</label>
         <input type="password" minlength="6" maxlength="10" name="password" placeholder="6 caracteres" required>
 
