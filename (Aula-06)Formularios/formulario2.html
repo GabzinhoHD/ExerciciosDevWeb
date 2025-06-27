@@ -6,36 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario-2</title>
     <style>
+        /* Disposição do form */
         form{
             display: grid;
             grid-template-columns: max-content max-content;
-            max-width: 40%;
         }
-
+        
+        /* Espaçamentos entre os campos + botão */
         input, select, textarea, button{
             margin-left: 10px;
             margin-bottom: 10px;
         }
+
         label{
-            text-align: right;
+            text-align: right; /* Alinhamentos dos textos */
         }
+
         button{
-            max-width: fit-content;
+            width: 50px; /* Alinhamentos internos do botão */
             padding: 4px;
         }
     </style>
 </head>
 <body>
     <form>
+        <!--Nome-->
         <label>Nome</label> 
         <input type="text" name="nome" placeholder="Nome">
         
+        <!--Email-->
         <label>Email</label>
         <input type="email" name="email" placeholder="user@exemple.org">
 
+        <!--Senha-->
         <label>Password</label>
         <input type="password" name="password" placeholder="6 caracteres">
         
+        <!--Conhecimento-->
         <label>Possui conhecimento?</label> 
         <div>
             <input type="checkbox" name="conhecimento" value="1">JavaScript
@@ -43,6 +50,7 @@
             <input type="checkbox" name="conhecimento" value="3">CSS
         </div>
         
+        <!--Curso-->
         <label>Curso</label>
         <select name="Escolaridade">
             <option value="none">--Selecione--</option>
@@ -51,15 +59,17 @@
             <option value="M">Matemática</option>
         </select>
 
+        <!--Turno-->
         <label>Turno</label>
         <div>
             <input type="radio" name="turno" >Tarde
             <input type="radio" name="turno">Noite
         </div>
 
+        <!--Notivo-->
         <label>Motivo Matrícula</label>
         <textarea cols="20" rows="5" name="comentario"></textarea>
-        <p></p>
+        <p><!--Esse p serve para nao quebrar o grid--></p>
         <button>enviar</button>
     <form>
 </body>
