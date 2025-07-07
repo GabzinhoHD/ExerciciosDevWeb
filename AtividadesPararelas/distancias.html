@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distâncias</title>
+  <style>
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    td:first-child{ /* Espaçamentos dos planetas */
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Textos */
+    caption{ /* Titulo */
+        font-weight: bold;
+    }
+    th{ /* Cabeçalho */
+        padding: 10px;
+    }
+    span{
+        color: red;
+    }
+    tr:nth-child(2) td:last-child{ /* Segunda linha, Ultima celula */
+        color: blue; 
+    }
+
+    /* Imagens */
+    img{
+        width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <!--Titulo-->
+    <caption>Distâncias em relação ao <span>Sol</span></caption>
+
+    <!--Cabeçalho-->
+    <tr>
+        <th>Planeta</th><th>Nome</th><th>Distância</th>
+    </tr>
+    
+    <!--Conteudo-->
+    <tr>
+        <td><img src="earth.png"></td><td>Terra</td><td>1 AU</td>
+    </tr>
+    <tr>
+        <td><img src="venus.png"></td><td>Vênus</td><td>0.72 AU</td>
+    </tr>
+    <tr>
+        <td><img src="mars.png"></td><td>Marte</td><td>1.52 AU</td>
+    </tr>
+    <tr>
+        <td><img src="jupiter.png"></td><td>Jupiter</td><td>5.20 AU</td>
+    </tr>
+    <tr>
+        <td><img src="saturn.png"></td><td>Saturno</td><td>9.58 AU</td>
+    </tr>
+  </table>
+</body>
+</html>
